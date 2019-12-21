@@ -5,13 +5,13 @@ EELAYER END
 $Descr User 7874 5118
 encoding utf-8
 Sheet 1 1
-Title "MB85RC256V Based FRAM Module"
+Title "MB85RCXXX Based FRAM Module"
 Date "2019-12-06"
 Rev "1"
 Comp "www.SirBoard.com"
 Comment1 "SirBoard"
 Comment2 "SirKeep"
-Comment3 "MB85RC256V"
+Comment3 "MB85RC64, MB85RC128, MB85RC256, MB85RC512, MB85RC1M"
 Comment4 ""
 $EndDescr
 Text GLabel 5900 2150 0    50   Input ~ 0
@@ -111,8 +111,6 @@ F 3 "" H 3150 2825 50  0001 C CNN
 	1    3150 2825
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4300 1150 4300 1900
 $Comp
 L Connector_Generic:Conn_01x05 J1
 U 1 1 5DEA9F39
@@ -231,10 +229,7 @@ Connection ~ 3425 2775
 Wire Wire Line
 	3150 2775 3150 2825
 Wire Wire Line
-	4300 1150 3425 1150
-Wire Wire Line
 	2850 1150 2850 1700
-Connection ~ 4300 1150
 Wire Wire Line
 	3150 1700 3150 1150
 Connection ~ 3150 1150
@@ -290,7 +285,7 @@ L MB85RC256V:MB85RC256V U1
 U 1 1 5DEB39FE
 P 4450 2300
 F 0 "U1" H 4450 2738 50  0000 C CNN
-F 1 "MB85RC256V" H 4450 2648 50  0000 C CNN
+F 1 "MB85RCXXX" H 4450 2648 50  0000 C CNN
 F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 4450 2300 50  0001 C CNN
 F 3 "" H 4450 2300 50  0001 C CNN
 F 4 "C47538" H 4450 2300 50  0001 C CNN "Part"
@@ -304,8 +299,6 @@ Wire Wire Line
 Connection ~ 5150 1150
 Wire Wire Line
 	5150 1150 5400 1150
-Wire Wire Line
-	4300 1150 5150 1150
 Wire Wire Line
 	5800 1150 5625 1150
 Connection ~ 5400 1150
@@ -332,4 +325,6 @@ Text Label 5150 2400 0    50   ~ 0
 SDA
 Text Label 5225 2300 0    50   ~ 0
 SCL
+Wire Wire Line
+	3425 1150 5150 1150
 $EndSCHEMATC
